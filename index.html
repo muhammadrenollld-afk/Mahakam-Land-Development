@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahakam Land Development - Developer Perumahan Samarinda</title>
+    <meta name="description" content="Wujudkan rumah impian Anda di Samarinda bersama Mahakam Land Development. Hunian strategis, desain modern, dan bebas banjir.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(20, 83, 45, 0.92), rgba(20, 83, 45, 0.45));
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-100 transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Brand Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-leaf text-brand-600 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-brand-900">Mahakam<span class="text-brand-600">Land.</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Tentang Kami</a>
+                    <a href="#proyek" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Proyek</a>
+                    <a href="#keunggulan" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Keunggulan</a>
+                    <a href="#kontak" class="bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-brand-700 transition-colors shadow-md hover:shadow-lg">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-600 focus:outline-none p-2" aria-label="Toggle navigation menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+                <a href="#beranda" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 rounded-md">Beranda</a>
+                <a href="#tentang" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 rounded-md">Tentang Kami</a>
+                <a href="#proyek" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 rounded-md">Proyek</a>
+                <a href="#keunggulan" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 rounded-md">Keunggulan</a>
+                <a href="#kontak" class="block px-3 py-3 mt-2 text-center text-base font-medium bg-brand-600 text-white rounded-md hover:bg-brand-700">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative pt-20 pb-32 flex items-center min-h-[90vh]">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Perumahan Samarinda" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 pt-20">
+            <div class="max-w-2xl text-white">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-500/20 border border-brand-400/30 text-brand-100 text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
+                    DEVELOPER TERPERCAYA DI SAMARINDA
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    Wujudkan Rumah Impian di Jantung Kota Tepian
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 font-light leading-relaxed">
+                    Kami menghadirkan hunian eksklusif dengan desain modern minimalis, lingkungan asri, dan pastinya lokasi strategis bebas banjir di Samarinda.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#proyek" class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-full font-semibold text-center transition-all shadow-lg hover:shadow-brand-500/30 flex items-center justify-center gap-2">
+                        Lihat Proyek Kami <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://wa.me/6287722678406" target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-center transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Tanya Pricelist
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Grid -->
+                <div class="grid grid-cols-2 gap-4 relative">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rumah Mahakam Land" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior Rumah" class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
+                    
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-full shadow-2xl flex items-center justify-center h-32 w-32 text-center border-4 border-brand-50">
+                        <div>
+                            <span class="block text-3xl font-bold text-brand-600">10+</span>
+                            <span class="text-xs font-semibold text-gray-500">Tahun<br>Pengalaman</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <h2 class="text-brand-600 font-bold tracking-wide uppercase text-sm mb-3">Tentang Mahakam Land</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-snug">Membangun Kehidupan, Bukan Sekadar Bangunan.</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Sejak 2013, Mahakam Land Development telah berkomitmen untuk menghadirkan kawasan hunian terbaik di Samarinda. Kami memahami bahwa rumah adalah tempat di mana cerita keluarga dimulai.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Oleh karena itu, setiap proyek kami didesain dengan teliti memperhatikan sirkulasi udara, pencahayaan alami, struktur tanah, hingga manajemen drainase untuk memastikan kawasan hunian Anda <strong>bebas dari masalah banjir</strong>.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-100 p-3 rounded-lg text-brand-600">
+                                <i class="fa-solid fa-house-circle-check text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">500+</h4>
+                                <p class="text-sm text-gray-500">Unit Terjual</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-100 p-3 rounded-lg text-brand-600">
+                                <i class="fa-solid fa-map-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">5 Cluster</h4>
+                                <p class="text-sm text-gray-500">Tersebar di Samarinda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyek" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-bold tracking-wide uppercase text-sm mb-3">Proyek Unggulan Kami</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pilih Hunian Sesuai Gaya Hidup Anda</h3>
+                <p class="text-gray-600">Beragam pilihan cluster eksklusif di berbagai lokasi strategis Kota Samarinda. Harga bervariasi menyesuaikan kebutuhan dan impian Anda.</p>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur text-brand-700 text-xs font-bold px-3 py-1.5 rounded-full">
+                            Tersedia
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pesona Mahakam" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2"><i class="fa-solid fa-location-dot text-brand-500 mr-2"></i>Samarinda Seberang</div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">Cluster Pesona Mahakam</h4>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Hunian asri dengan view langsung ke arah bukit. Lingkungan tenang dan akses mudah ke Jembatan Mahakam.</p>
+                        
+                        <div class="flex items-center gap-4 text-sm text-gray-700 mb-6 border-y border-gray-100 py-3">
+                            <span title="Kamar Tidur"><i class="fa-solid fa-bed text-gray-400 mr-1"></i> 2</span>
+                            <span title="Kamar Mandi"><i class="fa-solid fa-bath text-gray-400 mr-1"></i> 1</span>
+                            <span title="Luas Bangunan"><i class="fa-solid fa-ruler-combined text-gray-400 mr-1"></i> 45m²</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-xs text-gray-500">Mulai dari</p>
+                                <p class="text-lg font-bold text-brand-700">Rp 450 Jt-an</p>
+                            </div>
+                            <a href="#kontak" class="bg-gray-900 hover:bg-brand-600 text-white h-10 w-10 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 bg-red-500/90 backdrop-blur text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                            Sisa 3 Unit
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bukit Sempaja Asri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2"><i class="fa-solid fa-location-dot text-brand-500 mr-2"></i>Sempaja Selatan, Samut</div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">Bukit Sempaja Asri</h4>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Kawasan premium eksklusif dekat dengan pusat olahraga Sempaja dan kampus-kampus besar.</p>
+                        
+                        <div class="flex items-center gap-4 text-sm text-gray-700 mb-6 border-y border-gray-100 py-3">
+                            <span title="Kamar Tidur"><i class="fa-solid fa-bed text-gray-400 mr-1"></i> 3</span>
+                            <span title="Kamar Mandi"><i class="fa-solid fa-bath text-gray-400 mr-1"></i> 2</span>
+                            <span title="Luas Bangunan"><i class="fa-solid fa-ruler-combined text-gray-400 mr-1"></i> 75m²</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-xs text-gray-500">Mulai dari</p>
+                                <p class="text-lg font-bold text-brand-700">Rp 750 Jt-an</p>
+                            </div>
+                            <a href="#kontak" class="bg-gray-900 hover:bg-brand-600 text-white h-10 w-10 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur text-brand-700 text-xs font-bold px-3 py-1.5 rounded-full">
+                            Tahap Baru
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Griya Sungai Kunjang" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2"><i class="fa-solid fa-location-dot text-brand-500 mr-2"></i>Sungai Kunjang</div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">Griya Kunjang Townhouse</h4>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Hunian berkonsep smart home system, dekat dengan pusat perbelanjaan Big Mall Samarinda.</p>
+                        
+                        <div class="flex items-center gap-4 text-sm text-gray-700 mb-6 border-y border-gray-100 py-3">
+                            <span title="Kamar Tidur"><i class="fa-solid fa-bed text-gray-400 mr-1"></i> 3</span>
+                            <span title="Kamar Mandi"><i class="fa-solid fa-bath text-gray-400 mr-1"></i> 2</span>
+                            <span title="Luas Bangunan"><i class="fa-solid fa-ruler-combined text-gray-400 mr-1"></i> 90m²</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-xs text-gray-500">Mulai dari</p>
+                                <p class="text-lg font-bold text-brand-700">Rp 1.1 M</p>
+                            </div>
+                            <a href="#kontak" class="bg-gray-900 hover:bg-brand-600 text-white h-10 w-10 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#kontak" class="inline-block border-2 border-brand-600 text-brand-600 font-semibold px-8 py-3 rounded-full hover:bg-brand-600 hover:text-white transition-colors">
+                    Unduh Brosur Lengkap
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="keunggulan" class="py-24 bg-brand-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-400 font-bold tracking-wide uppercase text-sm mb-3">Kenapa Memilih Kami</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Standar Kualitas Tertinggi di Kelasnya</h3>
+                <p class="text-gray-300">Kami tidak hanya membangun rumah, tapi menciptakan ekosistem hidup yang mendukung kenyamanan masa depan keluarga Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-brand-800/50 p-8 rounded-2xl border border-brand-700/50 hover:bg-brand-800 transition-colors">
+                    <div class="w-14 h-14 bg-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Kawasan Bebas Banjir</h4>
+                    <p class="text-brand-200 text-sm leading-relaxed">Sistem drainase tertutup dan struktur peninggian tanah, garansi lingkungan aman dari banjir khas Samarinda.</p>
+                </div>
+
+                <div class="bg-brand-800/50 p-8 rounded-2xl border border-brand-700/50 hover:bg-brand-800 transition-colors">
+                    <div class="w-14 h-14 bg-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Keamanan 24 Jam</h4>
+                    <p class="text-brand-200 text-sm leading-relaxed">Sistem One Gate System, CCTV kawasan, dan security profesional menjaga privasi & keamanan keluarga.</p>
+                </div>
+
+                <div class="bg-brand-800/50 p-8 rounded-2xl border border-brand-700/50 hover:bg-brand-800 transition-colors">
+                    <div class="w-14 h-14 bg-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Lokasi Strategis</h4>
+                    <p class="text-brand-200 text-sm leading-relaxed">Akses mudah ke rumah sakit, sekolah, pusat perbelanjaan, dan jalan protokol di Samarinda.</p>
+                </div>
+
+                <div class="bg-brand-800/50 p-8 rounded-2xl border border-brand-700/50 hover:bg-brand-800 transition-colors">
+                    <div class="w-14 h-14 bg-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Desain Hijau & Asri</h4>
+                    <p class="text-brand-200 text-sm leading-relaxed">Lebih dari 30% area didedikasikan untuk ruang terbuka hijau dan taman bermain anak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="relative py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-50 rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 shadow-sm border border-brand-100">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Siap untuk melihat rumah impian Anda?</h3>
+                    <p class="text-gray-600 mb-8">Jadwalkan kunjungan (survey lokasi) hari ini juga. Tim marketing kami siap mendampingi dan memberikan solusi KPR terbaik untuk Anda.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-gray-700">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-600">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="font-medium">Jalan Ringroat No 08 Samarinda Ulu</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-700">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-600">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span class="font-medium">087722678406 (Marketing)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-5/12 w-full bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <h4 class="text-xl font-bold mb-6 text-gray-900">Hubungi Kami</h4>
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-colors" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nomor WhatsApp</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-colors" placeholder="08xx-xxxx-xxxx" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Pesan / Minat Cluster</label>
+                            <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-colors" placeholder="Saya tertarik dengan Cluster Pesona..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-4 rounded-lg transition-colors shadow-md">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-leaf text-brand-500 text-2xl"></i>
+                        <span class="font-bold text-xl tracking-tight text-white">Mahakam<span class="text-brand-500">Land.</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6 max-w-sm">
+                        Developer perumahan terpercaya di Samarinda. Membangun hunian berkualitas, modern, asri, dan bebas banjir sejak 2013.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-colors" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="text-white font-bold mb-4">Tautan Cepat</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#beranda" class="hover:text-brand-400 transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-brand-400 transition-colors">Tentang Kami</a></li>
+                        <li><a href="#proyek" class="hover:text-brand-400 transition-colors">Proyek & Produk</a></li>
+                        <li><a href="#keunggulan" class="hover:text-brand-400 transition-colors">Keunggulan</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-white font-bold mb-4">Proyek Kami</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#proyek" class="hover:text-brand-400 transition-colors">Pesona Mahakam</a></li>
+                        <li><a href="#proyek" class="hover:text-brand-400 transition-colors">Bukit Sempaja Asri</a></li>
+                        <li><a href="#proyek" class="hover:text-brand-400 transition-colors">Griya Kunjang</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Mahakam Land Development. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile menu toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('border-gray-100');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('border-gray-100');
+            }
+        });
+        
+        // Contact Form Toast Notification
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Create toast notification
+            const notif = document.createElement('div');
+            notif.className = 'fixed bottom-6 right-6 bg-brand-600 text-white px-6 py-4 rounded-xl shadow-2xl z-50 flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300';
+            notif.innerHTML = `
+                <i class="fa-solid fa-circle-check text-2xl"></i>
+                <div>
+                    <h4 class="font-bold text-base">Pesan Terkirim!</h4>
+                    <p class="text-xs text-brand-100">Tim Marketing kami akan segera menghubungi Anda via WhatsApp.</p>
+                </div>
+            `;
+            document.body.appendChild(notif);
+            
+            // Animate in
+            setTimeout(() => {
+                notif.classList.remove('translate-y-20', 'opacity-0');
+            }, 100);
+            
+            // Animate out and cleanup
+            setTimeout(() => {
+                notif.classList.add('translate-y-20', 'opacity-0');
+                setTimeout(() => notif.remove(), 300);
+            }, 4000);
+            
+            form.reset();
+        });
+    </script>
+</body>
+</html>
